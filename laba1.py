@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import control.matlab as con
 import math
-#хуй
+#я в шоке
 class Lab1():
     def BAGUVIX(GG1, name_gg1, GG2, name_gg2, t):  # функция для построения графиков характеристик
         topic = {
