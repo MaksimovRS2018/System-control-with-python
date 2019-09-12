@@ -2,14 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import control.matlab as con
 import math
-<<<<<<< HEAD
-#я в шоке
-=======
 
-
-# import Proverka #не нужно
-
->>>>>>> parent of 20abc2e... Update laba1.py
 class Lab1():
 
     def BAGUVIX(GG1, name_gg1, GG2, name_gg2, t):  # функция для построения графиков характеристик
