@@ -3,11 +3,7 @@ import matplotlib.pyplot as plt
 import control.matlab as con
 import math
 
-
-# import Proverka #не нужно
-
 class Lab1():
-
     def BAGUVIX(GG1, name_gg1, GG2, name_gg2, t):  # функция для построения графиков характеристик
         topic = {
             'G1': 'безынерционного звена',
@@ -22,8 +18,7 @@ class Lab1():
         plt.figure(1)  # Вывод графиков в отдельном окне
         y1, t1 = con.step(GG1, t)
         y2, t2 = con.step(GG2, t)
-        lines = [y1, y2]
-        # plt.subplot(1, 1, 1)  # 1цифра - количество строк в графике, 2 -тьиьтиколичество графиков в строке, 3 -номер графика
+        lines = [y1, y2]        
         lines[0], lines[1] = plt.plot(y1, 'r', y2, 'g')
         plt.legend(lines, ['W для 1', 'W для 2'], loc='best', ncol=2, fontsize=10)
         plt.title('Переходная функция' + '\n для ' + k1, fontsize=10)
@@ -49,17 +44,6 @@ class Lab1():
         plt.plot()
         plt.title('Частотные характеристики' + "\n для " + k1, fontsize=10, y=2.2)
         plt.show()
-
-    # Для задания своих чисел через консоль
-    # F = Proverka
-    # td = F.Kek('Введите длительность процесса в секундах= ').Prov()
-    # k1 = F.Kek('Введите коэф. к для безынерцинного звена = ').Prov1()
-    # k2 = F.Kek('Введите коэф. к для апериодического звена = ').Prov1()
-    # T2 = F.Kek('Введите коэф. T для апериодического звена = ').Prov1()
-    # k3 = F.Kek('Введите коэф. к для интегрального звена = ').Prov1()
-    # T3 = int(input('Введите коэф. T для интегрального звена = '))
-    # k4 = F.Kek('Введите коэф. к для реал дифф звена = ').Prov1()
-    # T4 = F.Kek('Введите коэф. T для реал дифф звена = ').Prov1()
 
     r = 2  # для изменения
     td = 300
