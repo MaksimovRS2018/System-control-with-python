@@ -22,9 +22,9 @@ class Lab1():
         y2, t2 = con.step(GG2, t)
         lines = [y1, y2]
         # plt.subplot(1, 1, 1)  # 1цифра - количество строк в графике, 2 -тьиьтиколичество графиков в строке, 3 -номер графика
-        lines[0], lines[1] = plt.plot(y1, 'r', y2, 'g')
-        plt.legend(lines, ['W для 1', 'W для 2'], loc='best', ncol=2, fontsize=10)
-        plt.title('Переходная функция' + '\n для ' + k1, fontsize=10)
+        lines[0], lines[1] = plt.plot(t, y1,"r", t, y2,"b")
+        plt.legend(lines, ['h(t) для 1', 'h(t) для 2'], loc='best', ncol=2, fontsize=10)
+        plt.title('Переходная характеристика' + '\n для ' + k1, fontsize=10)
         plt.ylabel('W')
         plt.xlabel('t, c')
         plt.grid()
@@ -32,9 +32,9 @@ class Lab1():
         plt.figure(2)
         y2, t2 = con.impulse(GG2, t)
         y1, t1 = con.impulse(GG1, t)
-        lines[0], lines[1] = plt.plot(y1, 'r', y2, 'g')
-        plt.legend(lines, ['W для 1', 'W для 2'], loc='best', ncol=2, fontsize=10)
-        plt.title('Импульсная функция' + '\n для ' + k1, fontsize=10)
+        lines[0], lines[1] = plt.plot(t, y1,"r", t, y2,"b")
+        plt.legend(lines, ['w(t) для 1', 'w(t) для 2'], loc='best', ncol=2, fontsize=10)
+        plt.title('Импульсная характеристика' + '\n для ' + k1, fontsize=10)
         plt.ylabel('h')
         plt.xlabel('t, c')
         plt.grid()
@@ -60,8 +60,9 @@ class Lab1():
     # T4 = F.Kek('Введите коэф. T для реал дифф звена = ').Prov1()
 
     r = 2  # для изменения
-    td = 30
-    t = np.linspace(1, stop=td, num=150)  #stop - конечное число, num-число точек при расчете
+    td = 50
+    t = np.linspace(0, stop=50, num=1000)  # stop - конечное число, num-число точек при расчете
+    # print(t)
     k1 = 2  # коэф. к для безынерцинного звена 1
     k2 = 1  # коэф. к для апериодического звена 1
     T2 = 2  # коэф. T для апериодического звена1
