@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import control.matlab as con
 import math
 
+
 class Lab1():
 
     def BAGUVIX(GG1, name_gg1, GG2, name_gg2, t):  # функция для построения графиков характеристик
@@ -59,8 +60,8 @@ class Lab1():
     # T4 = F.Kek('Введите коэф. T для реал дифф звена = ').Prov1()
 
     r = 2  # для изменения
-    td = 300
-    t = np.linspace(1, 2, td)  # задаем значения времени t от 1 до td с шагом 2 в мс
+    td = 30
+    t = np.linspace(1, stop=td, num=150)  #stop - конечное число, num-число точек при расчете
     k1 = 2  # коэф. к для безынерцинного звена 1
     k2 = 1  # коэф. к для апериодического звена 1
     T2 = 2  # коэф. T для апериодического звена1
